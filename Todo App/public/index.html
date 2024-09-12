@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-800 w-full h-screen flex items-center justify-center">
+    <div class="container flex items-center justify-center">
+        <div class="todo w-[33%] h-[600px] border-2 border-black relative">
+            
+                <h1 class="text-3xl text-slate-200 absolute top-8 left-3">Todo App</h1>
+                
+                <div class="px-5 absolute top-32 w-full">
+                    <div class="flex items-center w-full">
+                        <input id="input" class="p-2 outline-none w-[80%] rounded-md mx-3" type="text" placeholder="Enter your task...">
+                        <button onclick="addTask()" class="h-full whitespace-nowrap py-2 px-4 bg-slate-400 rounded-md font-semibold">Add Task</button>
+                    </div>
+                    <ul id="taskLists" class="text-white text-xl mt-5">
+                        <li onclick="markAsDone()" class="py-2 flex justify-between cursor-pointer checked:line-through">Python learning<i class="fa-solid fa-trash"></i></li>
+                        <li class="py-2 flex justify-between cursor-pointer">Chinese class at 5:00 pm<i class="fa-solid fa-trash "></i></li>
+                        <li class="py-2 flex justify-between cursor-pointer">Football match at night<i class="fa-solid fa-trash "></i></li>
+                    </ul>
+                </div>
+        
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
