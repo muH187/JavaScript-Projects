@@ -5,7 +5,7 @@ const addTask = () => {
     if(input.value === "") {
         alert("You must write something to add.")
     } else{
-        // Intitializing const:
+        // Intitializing and Creating elements/const:
         const li = document.createElement('li')
         li.classList.add('py-2', 'flex', 'justify-between', 'cursor-pointer')
 
