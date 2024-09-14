@@ -7,19 +7,51 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
- 
-    
     <style>
-        body{
-            background-color: black;
+        @property --angle{
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+        .todo{
+            background: #1c1f2b;
+            
+        }
+        .todo::after, .todo::before{
+            content: '';
+            position: absolute;
+            height: 101%;
+            width: 101%;
+            background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            z-index: -1;
+            border-radius: 8px;
+            animation: 3s spin linear infinite;
+        }
+        .todo::before{
+            filter: blur(1.5rem);
+            opacity: 0.5;
+        }
+        @keyframes spin {
+            from{
+                --angle: 0deg;
+            }
+            to{
+                --angle: 360deg;
+            }
         }
     </style>
 </head>
-<body class="w-full h-screen flex items-center justify-center">
-    <div class="container flex items-center justify-center">
-        <div class="todo w-[33%] h-[600px] border-2 border-black relative">
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 w-full h-screen flex items-center justify-center">
+
+        <div class="todo w-[33%] h-[600px] rounded-lg relative">
             
-                <h1 class="text-3xl text-slate-200 absolute top-8 left-3">Todo App</h1>
+                <h1 class="text-3xl text-slate-200 absolute top-8 left-5">Todo App</h1>
+                <div class="image absolute right-3 top-1">
+                    <img src="todoIcon.png" alt="">    
+                </div>
                 
                 <div class="px-5 absolute top-32 w-full">
                     <div class="flex items-center w-full">
@@ -32,7 +64,6 @@
                 </div>
         
         </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
