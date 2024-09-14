@@ -8,14 +8,16 @@
 </head>
 <body>
     <div class="container bg-slate-800 max-w-full h-screen">
-        <div class="searchBar flex items-center justify-center">
-            <input class="bg-slate-700 text-white p-2 mt-3 rounded-lg w-3/4 outline-none" type="text" placeholder="search city...">
-        </div>
+        <form class="weatherForm flex items-center justify-center">
+            <input class="cityInput bg-slate-700 text-white p-2 mt-3 rounded-lg w-2/4 outline-none" type="text" placeholder="search city...">
+            <button class="text-white font-semibold text-xl bg-green-600 px-3 py-1 mt-3 ml-3 hover:bg-green-500 rounded-md">Get Weather</button>
+        </form>
         <div class="top flex justify-center items-center">
             <div class="w-[75%] h-96 flex justify-between items-center">
-                <div class="details text-white">
-                    <h1 class="text-4xl mb-3">Karachi</h1>
+                <div id="details" class="text-white text-center">
+                    <h1 id="displayCity" class="text-5xl mb-10 font-semibold"></h1>
                     <p class="mb-3">Chances of rain 0%</p>
+                    <h1 class="font-semibold mt-5 text-slate-400">Temperature</h1>
                     <h1 class="text-3xl font-bold">32°C</h1>
                 </div>
                 <div class="image w-32 h-32">
