@@ -36,12 +36,23 @@ async function getWeatherData(city) {
 
 function displayWeatherInfo(data) {
     console.log(data)
-    const {name: city, main: {temp, humidity}, weather: [{description, id}]} = data
+    const {name: city, main: {feels_like, temp, humidity}, weather: [{description, id}], wind: {speed}} = data
 
     const displayCity = document.getElementById("displayCity")
+    const displayTemp = document.getElementById("displayTemp")
+    const displayHumidity = document.getElementById("displayHumidity")
+    const displayFeels_like = document.getElementById("displayFeels_like")
+    const displayWind = document.getElementById("displayWind")
+    const displayDescription = document.getElementById("displayDescription")
 
 
     displayCity.textContent = city
+    displayTemp.textContent = (temp - 273.15).toFixed(0) + "°C" 
+    displayHumidity.textContent = humidity
+    displayFeels_like.textContent = (feels_like - 273.15).toFixed(0) + "°C" 
+    displayWind.textContent = (speed * 3.6).toFixed(2) + "km/h" 
+    displayDescription.textContent = description   
+
     
 }
 
