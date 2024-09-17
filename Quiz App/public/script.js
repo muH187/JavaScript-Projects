@@ -1,7 +1,7 @@
 const questionEle = document.getElementById("questionEle")
-const buttons = document.getElementById("buttons")
 const choices = document.getElementById("choices")
 const nextBtn = document.getElementById("nextBtn")
+const result = document.getElementById('result')
 
 const questions = [
     {
@@ -74,6 +74,7 @@ function checkAnswer(selectedOption, button) {
 function showResult() {
     questionEle.textContent = "Quiz Completed"
     choices.textContent = ""
+    result.textContent = `You scored ${score} out of ${questions.length}!`
     nextBtn.textContent = "Play Again"
     nextBtn.addEventListener('click', () => {
         restartQuiz()
