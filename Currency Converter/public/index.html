@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    
+    <div class="container bg-slate-700 h-screen max-w-full flex justify-center items-center">
+        <div class="currencyConverter h-[38rem] w-[25rem] bg-slate-300 rounded-lg">
+            <div class="text-center">
+                <img class="w-32 m-auto my-8" src="currency.png" alt="">
+                <h1 class="text-3xl font-semibold mt-3">Currency Converter</h1>
+            </div>
+            
+                <div class="w-[20rem] m-auto my-8">
+                    <h2 class="text-xl font-[500]">Amount:</h2>
+                    <input class="py-2 px-3 bg-transparent outline-none border-b-2 border-black w-full" type="text" placeholder="enter your amount...">
+                </div>
+
+                <div class="w-full text-center my-10">
+                    <label class="inline-block" for="">
+                        <select class="mx-2 text-2xl p-1 rounded-md cursor-pointer" name="" id="">
+                            <option value="">USD</option>
+                            
+                        </select>
+                        <select class="mx-2 text-2xl p-1 rounded-md cursor-pointer" name="" id="">
+                            <option value="">PKR</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="w-full">
+                    <button class="bg-green-500 text-white w-[18rem] block m-auto py-2 font-[500] text-xl rounded-lg my-5">Convert</button>
+                    <h1 id="showAmount" class="bg-slate-600 text-center text-white w-[18rem] block m-auto py-2 font-[400] text-xl rounded-md">2004</h1>
+                </div>
+                
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
