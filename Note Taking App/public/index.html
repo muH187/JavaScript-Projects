@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container bg-purple-800 max-w-full h-screen flex justify-center items-center">
+        <div class="noteApp bg-white max-w-80 max-h-80 rounded-lg shadow-2xl">
+            <div class="addNote bg-slate-200 shadow-sm m-5 h-[5rem] w-[5rem] cursor-pointer rounded-md flex justify-center items-center">
+                <button class="text-4xl text-slate-500">+</button>
+            </div>
+            <div class="notes flex flex-wrap gap-3 justify-center items-center overflow-y-auto max-h-[200px]">
+                <div class="note bg-[#F8E977] w-36 h-36 flex flex-col justify-between rounded-md text-center p-3 shadow-2xl">
+                    <p>hello world</p>
+                    <div class="controls">
+                        <i class="fa-solid fa-pencil mx-3 cursor-pointer"></i>
+                        <i class="fa-solid fa-trash mx-3 cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="note bg-[#F8E977] w-36 h-36 rounded-md text-center p-3 shadow-2xl">
+                    <p>I'm here</p>
+                </div>
+                <div class="note bg-[#F8E977] w-36 h-36 rounded-md text-center p-3 shadow-2xl">
+                    <p>I'm here</p>
+                </div>
+                <div class="note bg-[#F8E977] w-36 h-36 rounded-md text-center p-3 shadow-2xl">
+                    <p>I'm here</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
