@@ -14,13 +14,22 @@
             <div class="addNote xl:h-40 xl:w-40 bg-slate-200 shadow-sm m-5 h-[5rem] w-[5rem] cursor-pointer rounded-md flex justify-center items-center">
                 <button class="xl:text-7xl text-4xl text-slate-500">+</button>
             </div>
-            <div class="newNote hidden md:left-[15%] text-center left-[8%] top-[15%] absolute bg-white border-2 border-slate-400 p-5 rounded-md shadow-2xl">
-                <h1 class="text-center text-xl font-bold">New Note</h1>
-                <textarea class="block outline-none border-2 border-purple-700 rounded-md mt-5 p-2 h-[6rem]" placeholder="Enter your notes here..." name="" id=""></textarea>
-                <button class="bg-purple-700 text-white py-1 px-2 rounded-md font-semibold mr-3 mt-5">Create Note</button>
-                <button class="bg-slate-500 text-white py-1 px-2 rounded-md font-semibold mt-5">Close</button>
+            <div class="newNote hidden xl:justify-center xl:items-center xl:flex-col xl:w-[40rem] xl:h-[30rem] xl:left-64 xl:top-20 md:left-[15%] text-center left-[8%] top-[15%] absolute bg-white border-2 border-slate-400 p-5 rounded-md shadow-2xl">
+                <h1 class="xl:text-4xl text-center text-xl font-bold">New Note</h1>
+                <textarea class="xl:h-48 xl:w-4/5 xl:m-auto xl:my-5 block outline-none border-2 border-purple-700 rounded-md mt-5 p-2 h-[6rem]" placeholder="Enter your notes here..." name="" id="input"></textarea>
+                <div class="buttons">
+                    <button id="createBtn" class="bg-purple-700 text-white py-1 px-2 rounded-md font-semibold mr-3 mt-5">Create Note</button>
+                    <button id="closeBtn" class="bg-slate-500 text-white py-1 px-2 rounded-md font-semibold mt-5">Close</button>
+                </div>
             </div>
-            <div class="notes xl:max-h-[900px] flex flex-wrap gap-3 justify-center items-center overflow-y-auto h-[200px]">
+            <div class="notes ">
+                <div class="note xl:w-60 xl:h-60 xl:rounded-lg text-xl bg-[#F8E977] w-36 h-36 flex flex-col justify-between rounded-md text-center p-3 shadow-2xl">
+                    <p id="showText">hello world</p>
+                    <div class="controls">
+                        <i class="fa-solid fa-pencil mx-3 cursor-pointer"></i>
+                        <i class="fa-solid fa-trash mx-3 cursor-pointer"></i>
+                    </div>
+                </div>
                 <div class="note xl:w-60 xl:h-60 xl:rounded-lg text-xl bg-[#F8E977] w-36 h-36 flex flex-col justify-between rounded-md text-center p-3 shadow-2xl">
                     <p>hello world</p>
                     <div class="controls">
