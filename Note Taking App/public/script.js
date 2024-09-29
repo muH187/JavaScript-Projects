@@ -4,37 +4,68 @@ const closeBtn = document.getElementById("closeBtn")
 const addNote = document.querySelector(".addNote")
 const newNote = document.querySelector(".newNote")
 const showText = document.getElementById("showText")
+const notesContainer = document.querySelector(".notes")
 
-
+let isEditing = false
+let currentNote = null
 
 addNote.addEventListener('click', () => {
     newNote.style.display = "flex"
 })
 
 createBtn.addEventListener('click', () => {
-    console.log("hello")
-    const notes = document.createElement('div')
-    notes.className = "notes"
+
+    if(input.value === "") return alert("You must write something!")
+    
+    if(isEditing) {
+        currentNote.remove()
+        isEditing = false
+        currentNote = null
+    } else {
+        showingAddNew()
+    }
+})
+
+closeBtn.addEventListener('click', () => {
+    input.value = ""
+    newNote.style.display = 'none'
+})
+
+const showingAddNew = () => {
     const note = document.createElement('div')
-    note.className = "xl:w-60 xl:h-60 xl:rounded-lg text-xl bg-[#F8E977] w-36 h-36 flex flex-col justify-between rounded-md text-center p-3 shadow-2xl"
+    note.className = "note"
 
     const p = document.createElement('p')
     p.textContent += input.value
 
     const controls = document.createElement('div')
+
     const editBtn = document.createElement('i')
     editBtn.className = "fa-solid fa-pencil mx-3 cursor-pointer"
+
     const trashBtn = document.createElement('i')
     trashBtn.className = "fa-solid fa-trash mx-3 cursor-pointer"
 
     controls.appendChild(editBtn)
     controls.appendChild(trashBtn)
 
-    notes.appendChild(note)
     note.appendChild(p)
     note.appendChild(controls)
 
-    input.value = ""
-    notes.classList.remove('notes')
-})
+    notesContainer.appendChild(note)
 
+    input.value = ""
+    newNote.style.display = 'none'
+
+    trashBtn.addEventListener('click', () => {
+        note.remove()
+    })
+
+    editBtn.addEventListener('click', () => {
+        newNote.style.display = "flex"
+        createBtn.textContent = "Update"
+        input.value += p.textContent
+        isEditing = true
+        currentNote = note
+    })
+}

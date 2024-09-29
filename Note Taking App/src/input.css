@@ -5,3 +5,7 @@
 .notes{
     @apply xl:max-h-[900px] flex flex-wrap gap-3 justify-center items-center overflow-y-auto xl:h-[420px] h-[190px];
 }
+
+.note{
+    @apply xl:w-60 xl:h-60 xl:rounded-lg text-xl bg-[#F8E977] w-36 h-36 flex flex-col justify-between rounded-md text-center p-3 shadow-2xl;
+}
