@@ -14,7 +14,7 @@
             <h1 class="font-semibold text-2xl">Pomodoro Timer</h1>
             <div class="buttons mt-5">
                 <button class="font-semibold mr-3">Work</button>
-                <button class="font-semibold">Break</button>
+                <button onclick="breakTimer()" class="font-semibold">Break</button>
             </div>
             <div class="timer my-8">
                 <div class="circle flex justify-center items-center rounded-[50%] relative bg-slate-400 w-40 h-40 before:content-[''] before:absolute before:w-[95%] before:h-[95%] before:rounded-[50%] before:bg-slate-800">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="controls flex gap-6 text-2xl my-3">
-                <button id="startBtn" onclick="start()"><i class="fa-solid fa-play"></i></button>
+                <button id="startBtn"><i class="fa-solid fa-play"></i></button>
                 <a id="againBtn" href=""><i class="fa-solid fa-arrow-rotate-left"></i></a>
             </div>
         </div>
