@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="container max-w-full h-screen flex justify-center items-center">
+        <div class="expense-tracker">
+            <h1 class="text-center text-3xl font-semibold my-3">Expense Tracker</h1>
+            <div class="board bg-slate-300 min-h-[30rem] w-[20rem] rounded-sm flex flex-col">
+                <div class="balance bg-[#3335B6] text-white w-[18.5rem] text-center py-3 rounded-md mt-3 mx-auto">
+                    <div class="total-balance text-center">
+                        <p class="text-sm">Total Balance</p>
+                        <h1 class="text-xl font-bold">$0.00</h1>
+                    </div>
+                    <div class="flex justify-around items-center">
+                        <div class="income-balance">
+                            <p class="text-sm">Income</p>
+                            <h1 class="text-xl font-bold">+$0.00</h1>
+                        </div>
+                        <div class="expense-balance">
+                            <p class="text-sm">Expense</p>
+                            <h1 class="text-xl font-bold">-$0.00</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="transactions mt-3 px-3">
+                    <h1 class="font-[500] text-xl">Transactions</h1>
+                    <p class="text-center">no transactions.</p>
+                </div>
+                <div class="add-transaction mt-3 px-3">
+                    <h1 class="font-[500] text-xl">Add Transactions</h1>
+                    <div class="buttons bg-[#EBEBEB] flex justify-evenly py-1 rounded-md my-2">
+                        <button class="px-8 font-[500] rounded-md">Expense</button>
+                        <button class="px-8 font-[500] rounded-md">Income</button>
+                    </div>
+                </div>
+                <div class="name mt-3 px-3">
+                    <h1 class="font-[500]">Name</h1>
+                    <input class="p-1 outline-none rounded-md border border-slate-400 w-full" type="text">
+                </div>
+                <div class="amount-date mt-3 px-3 flex justify-between items-center gap-5">
+                    <div>
+                        <h1 class="font-[500]">Amount</h1>
+                        <input class="w-32 p-1 rounded-md" type="number">
+                    </div>
+                    <div>
+                        <h1 class="font-[500]">Date</h1>
+                        <input class="rounded-md p-1" type="date">
+                    </div>
+                </div>
+                <button class="w-5/6 bg-[#3335B6] text-white font-[500] text-lg py-1 rounded-md m-auto">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
