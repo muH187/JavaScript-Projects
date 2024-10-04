@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expense Tracker</title>
     <link rel="stylesheet" href="output.css">
 </head>
 <body>
-    <div class="container max-w-full h-screen flex justify-center items-center">
+    <div class="container max-w-full h-screen flex justify-center items-center bg-slate-300">
         <div class="expense-tracker">
             <h1 class="text-center text-3xl font-semibold my-3">Expense Tracker</h1>
-            <div class="board bg-slate-300 min-h-[30rem] w-[20rem] rounded-sm flex flex-col lg:min-h-[32rem] lg:w-[22rem] lg:rounded-md">
+            <div class="board bg-white shadow-lg min-h-[30rem] w-[20rem] rounded-sm flex flex-col lg:min-h-[32rem] lg:w-[22rem] lg:rounded-md">
                 <div class="balance bg-[#3335B6] text-white w-[18.5rem] text-center py-3 rounded-md mt-3 mx-auto lg:w-[20rem]">
                     <div class="total-balance text-center">
                         <p class="text-sm">Total Balance</p>
@@ -29,7 +29,19 @@
                 </div>
                 <div class="transactions mt-3 px-3">
                     <h1 class="font-[500] text-xl">Transactions</h1>
-                    <p class="text-center">no transactions.</p>
+                    <!-- <p class="text-center">no transactions.</p> -->
+                    <div class="details px-2 py-1 cursor-pointer hover:bg-slate-300 rounded-md relative">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="font-[600]">Salary</h1>
+                                <p>5/1/2024</p>
+                            </div>
+                            <h1 class="text-xl text-green-700 font-[500]">+$5,000.00</h1>
+                        </div>
+                        <div class="svg h-10 w-10 bg-red-600 text-white p-2 rounded-md absolute top-2 right-1">
+                            <img src="cross.svg" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="add-transaction mt-3 px-3">
                     <h1 class="font-[500] text-xl">Add Transactions</h1>
@@ -45,14 +57,14 @@
                 <div class="amount-date mt-3 px-3 flex justify-between items-center gap-5">
                     <div>
                         <h1 class="font-[500]">Amount</h1>
-                        <input class="w-32 p-1 rounded-md" type="number">
+                        <input class="w-32 p-1 rounded-md border border-slate-400" type="number">
                     </div>
                     <div>
                         <h1 class="font-[500]">Date</h1>
                         <input class="rounded-md p-1" type="date">
                     </div>
                 </div>
-                <button class="w-5/6 bg-[#3335B6] text-white font-[500] text-lg py-1 rounded-md m-auto">Submit</button>
+                <button class="w-5/6 bg-[#3335B6] text-white font-[500] text-lg py-1 rounded-md mx-auto my-3">Submit</button>
             </div>
         </div>
     </div>
