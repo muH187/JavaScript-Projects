@@ -14,16 +14,16 @@
                 <div class="balance bg-[#3335B6] text-white w-[18.5rem] text-center py-3 rounded-md mt-3 mx-auto lg:w-[20rem]">
                     <div class="total-balance text-center">
                         <p class="text-sm">Total Balance</p>
-                        <h1 class="text-xl font-bold">$0.00</h1>
+                        <h1 id="totalBalance" class="text-xl font-bold">$0.00</h1>
                     </div>
                     <div class="flex justify-around items-center">
                         <div class="income-balance">
                             <p class="text-sm">Income</p>
-                            <h1 class="text-xl font-bold">+$0.00</h1>
+                            <h1 id="totalIncome" class="text-xl font-bold">+$0.00</h1>
                         </div>
                         <div class="expense-balance">
                             <p class="text-sm">Expense</p>
-                            <h1 class="text-xl font-bold">-$0.00</h1>
+                            <h1 id="totalExpense" class="text-xl font-bold">-$0.00</h1>
                         </div>
                     </div>
                 </div>
@@ -33,10 +33,22 @@
                     <div class="details px-2 py-1 cursor-pointer hover:bg-slate-300 rounded-md relative">
                         <div class="flex items-center justify-between">
                             <div>
-                                <h1 class="font-[600]">Salary</h1>
-                                <p>5/1/2024</p>
+                                <h1 id="displayIncomeName" class="font-[600]">Salary</h1>
+                                <p id="incomeDate">5/1/2024</p>
                             </div>
-                            <h1 class="text-xl text-green-700 font-[500]">+$5,000.00</h1>
+                            <h1 id="income" class="text-xl text-green-700 font-[500]">+$5,000.00</h1>
+                        </div>
+                        <div class="action h-10 w-10 bg-red-600 text-white p-2 rounded-md absolute top-2 right-1">
+                            <img class="svg" src="cross.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="details px-2 py-1 cursor-pointer hover:bg-slate-300 rounded-md relative">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 id="displayExpenseName" class="font-[600]">Salary</h1>
+                                <p id="expenseDate">5/1/2024</p>
+                            </div>
+                            <h1 id="expense" class="text-xl text-red-700 font-[500]">-$2,000.00</h1>
                         </div>
                         <div class="action h-10 w-10 bg-red-600 text-white p-2 rounded-md absolute top-2 right-1">
                             <img class="svg" src="cross.svg" alt="">
@@ -45,26 +57,26 @@
                 </div>
                 <div class="add-transaction mt-3 px-3">
                     <h1 class="font-[500] text-xl">Add Transactions</h1>
-                    <div class="buttons bg-[#EBEBEB] flex justify-evenly py-1 rounded-md my-2">
-                        <button class="px-8 font-[500] rounded-md">Expense</button>
-                        <button class="px-8 font-[500] rounded-md">Income</button>
+                    <div class="buttons bg-[#bab9b9bd] flex justify-evenly py-1 rounded-md my-2">
+                        <button id="expenseBtn" class="px-8 font-[500] rounded-md">Expense</button>
+                        <button id="incomeBtn" class="px-8 font-[500] rounded-md">Income</button>
                     </div>
                 </div>
                 <div class="name mt-3 px-3">
                     <h1 class="font-[500]">Name</h1>
-                    <input class="p-1 outline-none rounded-md border border-slate-400 w-full" type="text">
+                    <input id="nameInput" class="p-1 outline-none rounded-md border border-slate-400 w-full" type="text">
                 </div>
                 <div class="amount-date mt-3 px-3 flex justify-between items-center gap-5">
                     <div>
                         <h1 class="font-[500]">Amount</h1>
-                        <input class="w-32 p-1 rounded-md border border-slate-400" type="number">
+                        <input id="amountInput" class="w-32 p-1 rounded-md border border-slate-400" type="number">
                     </div>
                     <div>
                         <h1 class="font-[500]">Date</h1>
                         <input class="rounded-md p-1" type="date">
                     </div>
                 </div>
-                <button class="w-5/6 bg-[#3335B6] text-white font-[500] text-lg py-1 rounded-md mx-auto my-3">Submit</button>
+                <button id="submitBtn" class="w-5/6 bg-[#3335B6] text-white font-[500] text-lg py-1 rounded-md mx-auto my-3">Submit</button>
             </div>
         </div>
     </div>
