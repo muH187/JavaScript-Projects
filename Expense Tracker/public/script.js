@@ -30,7 +30,7 @@ const submitBtn = document.getElementById('submitBtn')
 let isExpense = false
 let isIncome = false
 
-window.onload = function(e) {
+window.onload = function() {
     totalBalance.textContent = "$0.00"
     totalIncome.textContent = "$0.00"
     totalExpense.textContent = "$0.00"
@@ -38,15 +38,19 @@ window.onload = function(e) {
 
 submitBtn.addEventListener('click', (displayIncomeAmount, displayExpenseAmount) => {
 
-    if (nameInput === "") {
+    if (nameInput == "") {
         alert('You need to type a name!')
-    } else if (amountInput === "") {
+    } else if (amountInput == "") {
         alert('You need to enter an amount!')
     } else {
 
+        totalBalance.textContent === ""
+        totalExpense.textContent === ""
+        totalIncome.textContent === ""
+
         totalBalance.textContent += `$ ${amountInput.value}`
-        totalIncome.textContent += `+$${displayIncomeAmount}`
-        totalExpense.textContent += `-$${displayExpenseAmount}`
+        totalIncome.textContent += `+$${(displayIncomeAmount) + (amountInput.value)}`
+        totalExpense.textContent += `-$${(displayExpenseAmount) - (amountInput.value)}`
 
         if (isExpense) {
 
