@@ -7,7 +7,7 @@
         "price": 999.99,
         "stock": 50,
         "description": "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256 GB SSD, and a 14-inch FHD Display.",
-        "image": "../public/mobiles.png"
+        "image": "/laptop.png"
     },
     {
         "id": 2,
@@ -17,17 +17,17 @@
         "price": 500,
         "stock": 10,
         "description": "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256 GB SSD, and a 14-inch FHD Display.",
-        "image": "../public/mobiles.png"
+        "image": "/headphone.png"
     },
     {
         "id": 3,
-        "name": "Earpods",
+        "name": "Appliances",
         "category": "Accessories",
         "brand": "ExampleBrand",
         "price": 250,
         "stock": 58,
         "description": "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256 GB SSD, and a 14-inch FHD Display.",
-        "image": "../public/mobiles.png"
+        "image": "/heroImage.png"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "price": 1200,
         "stock": 129,
         "description": "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256 GB SSD, and a 14-inch FHD Display.",
-        "image": "../public/mobiles.png"
+        "image": "/mobiles.png"
     }
 
 ]

@@ -20,7 +20,7 @@
     </section>
     <section class="w-[100rem] mx-auto">
       <nav class="flex items-center justify-between">
-        <img class="w-72 h-32" src="./public/logo.png" alt="">
+        <img class="w-72 h-32" src="/logo.png" alt="">
         <ul class="flex items-center gap-5 text-xl font-[500]">
           <li><a href="/">Home</a></li>
           <li><a href="">Products</a></li>
@@ -62,7 +62,7 @@
         </div>
         <div class="image relative">
           <figure class="absolute top-44">
-            <img src="./public/heroImage.png" alt="">
+            <img src="/heroImage.png" alt="">
           </figure>
         </div>
       </div>
@@ -82,7 +82,7 @@
           </div>
           <div class="image">
             <figure>
-              <img src="./public/laptop.png" alt="">
+              <img src="/laptop.png" alt="">
             </figure>
           </div>
         </div>
@@ -94,7 +94,7 @@
           </div>
           <div class="image">
             <figure>
-              <img src="./public/headphone.png" alt="">
+              <img src="/headphone.png" alt="">
             </figure>
           </div>
         </div>
@@ -106,7 +106,7 @@
           </div>
           <div class="image">
             <figure>
-              <img src="./public/mobiles.png" alt="">
+              <img src="/mobiles.png" alt="">
             </figure>
           </div>
         </div>
@@ -162,12 +162,12 @@
   <section>
     <div class="container w-[100rem] mx-auto">
       <div class="heading">
-        <h1>Checkout Ali Store</h1>
+        <h1 class="text-2xl font-[500] my-5">Checkout Ali Store</h1>
       </div>
     </div>
 
-    <section class="container w-[100rem] mx-auto">
-      <div id="productContainer">
+    <section class="container w-[100rem] mx-auto my-12">
+      <div id="productContainer" class="grid grid-cols-3 justify-items-center">
 
       </div>
     </section>
@@ -175,55 +175,52 @@
 
   <!-- Start Product Template Section -->
   <template id="productTemplate">
-
-    <div class="card" id="cardValue">
-
-      <article class="information [card]">
-
-        <span class="category"></span>
-
+    <div id="cardValue" class="card border rounded-lg shadow-lg p-4 max-w-sm bg-white my-3">
+      <article class="information space-y-4">
+        <span class="category text-sm text-gray-500"></span>
+        
         <div class="imageContainer">
-          <img class="productImage" src="" alt="">
+          <img class="productImage object-cover h-60 mx-auto" src="" alt="">
         </div>
-        <h1 class="productName"></h1>
-
-        <div class="productRating">
+        
+        <h1 class="productName text-lg font-semibold text-gray-800"></h1>
+        
+        <div class="productRating text-yellow-400 flex">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-
-        <p class="productDescription"></p>
-
-        <div class="productPriceElement">
-          <p class="productPrice"></p>
-          <p class="productActualPrice"></p>
+        
+        <p class="productDescription text-gray-600"></p>
+        
+        <div class="productPriceElement flex justify-between items-center">
+          <p class="productPrice text-xl font-bold text-gray-900"></p>
+          <p class="productActualPrice line-through text-gray-500"></p>
         </div>
-
-        <div class="productStockElement">
-          <p class="productProperty">Total Stocks Available:</p>
-          <p class="productStock"></p>
+        
+        <div class="productStockElement text-gray-700">
+          <p class="productProperty text-sm">Total Stocks Available:</p>
+          <p class="productStock font-semibold"></p>
         </div>
-
-        <div class="productQuantityElement">
-          <p class="productProperty">Quantity(Pieces)</p>
-          <div class="stockElement">
-            <button class="cartIncrement">+</button>
-            <p class="productQuantity">1</p>
-            <button class="cartDecrement">-</button>
+        
+        <div class="productQuantityElement space-y-2">
+          <p class="productProperty text-sm">Quantity (Pieces)</p>
+          <div class="stockElement flex items-center space-x-2">
+            <button class="cartIncrement bg-gray-200 px-2 py-1 rounded-md">+</button>
+            <p class="productQuantity font-semibold text-gray-800">1</p>
+            <button class="cartDecrement bg-gray-200 px-2 py-1 rounded-md">-</button>
           </div>
         </div>
-
-        <button class="addCartBtn">
+        
+        <button class="addCartBtn w-full bg-blue-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-blue-700">
           <i class="fa-solid fa-cart-shopping"></i> Add To Cart
         </button>
       </article>
-
     </div>
-
   </template>
+  
   <!-- End Product Template Section -->
 
   <!-- End Our Product Section -->
@@ -258,7 +255,7 @@
         </div>
         <div class="image">
           <figure>
-            <img src="./public/ecompost.png" alt="">
+            <img src="/ecompost.png" alt="">
           </figure>
         </div>
         <div class="right">
@@ -291,7 +288,7 @@
     <div class="grid grid-cols-4 w-[100rem] mx-auto py-3">
       <div class="1 mr-10">
         <figure>
-          <img src="./public/withoutBgLogo.png" alt="">
+          <img src="/withoutBgLogo.png" alt="">
         </figure>
         <p>Welcome to our Ali Store. Here you will find latest gadgets, smartphones, and many more things.</p>
       </div>
